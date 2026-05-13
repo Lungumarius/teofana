@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Teofana — Digital Marketing Strategist</title>
+        <title>Teofana — Digital Marketing Student</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
             href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap"
@@ -1177,6 +1177,869 @@
                 color: var(--sakura-deep);
             }
 
+
+            /* SKILLS — PREMIUM */
+            .skills-premium {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1rem;
+            }
+
+            .skill-card {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(253,232,238,0.55));
+                border: 1px solid var(--glass-border);
+                border-radius: 18px;
+                padding: 1rem 1.2rem;
+                backdrop-filter: blur(14px);
+                -webkit-backdrop-filter: blur(14px);
+                box-shadow: 0 4px 20px rgba(200, 100, 130, 0.06);
+                transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                            box-shadow 0.35s ease,
+                            border-color 0.35s ease;
+                overflow: hidden;
+            }
+
+            .skill-card::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(135deg, transparent 40%, rgba(232, 130, 154, 0.08) 100%);
+                opacity: 0;
+                transition: opacity 0.4s ease;
+                pointer-events: none;
+            }
+
+            .skill-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 16px 40px rgba(200, 100, 130, 0.18);
+                border-color: var(--sakura);
+            }
+
+            .skill-card:hover::before {
+                opacity: 1;
+            }
+
+            .skill-card-ico {
+                flex-shrink: 0;
+                width: 44px;
+                height: 44px;
+                border-radius: 14px;
+                background: linear-gradient(135deg, var(--sakura-light), #fff);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--sakura-deep);
+                box-shadow: inset 0 0 0 1px rgba(232, 130, 154, 0.15);
+                transition: transform 0.4s ease;
+            }
+
+            .skill-card-ico svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            .skill-card:hover .skill-card-ico {
+                transform: rotate(-4deg) scale(1.05);
+                background: linear-gradient(135deg, var(--sakura), var(--rose-gold-light));
+                color: #fff;
+            }
+
+            .skill-card-body {
+                display: flex;
+                flex-direction: column;
+                gap: 0.15rem;
+                min-width: 0;
+            }
+
+            .skill-card-title {
+                font-family: "Playfair Display", serif;
+                font-size: 1rem;
+                font-weight: 600;
+                color: var(--dark);
+                line-height: 1.2;
+                letter-spacing: 0.01em;
+            }
+
+            .skill-card-sub {
+                font-size: 0.7rem;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--rose-gold);
+                font-weight: 400;
+            }
+
+            /* TOOL CHIP MONOGRAMS */
+            .tool-chip {
+                background: white;
+                border: 1px solid var(--sakura-light);
+                border-radius: 16px;
+                padding: 1rem 0.6rem 0.9rem;
+                text-align: center;
+                font-size: 0.74rem;
+                font-weight: 500;
+                color: var(--dark-mid);
+                transition: all 0.3s;
+                cursor: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .tool-mono {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Playfair Display", serif;
+                font-size: 0.85rem;
+                font-weight: 700;
+                font-style: italic;
+                letter-spacing: 0;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            }
+
+            /* PROJECTS — SHOWCASE */
+            .projects-showcase {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.6rem;
+            }
+
+            .showcase-card {
+                position: relative;
+                background: white;
+                border-radius: 24px;
+                overflow: hidden;
+                border: 1px solid var(--sakura-light);
+                box-shadow: 0 6px 24px rgba(200, 100, 130, 0.08);
+                transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                            box-shadow 0.4s ease,
+                            border-color 0.4s ease;
+                cursor: none;
+            }
+
+            .showcase-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 24px 60px rgba(200, 100, 130, 0.22);
+                border-color: var(--sakura);
+            }
+
+            .showcase-thumb {
+                position: relative;
+                aspect-ratio: 4 / 5;
+                overflow: hidden;
+                background: linear-gradient(135deg, var(--sakura-light), var(--rose-gold-light));
+            }
+
+            .showcase-thumb video,
+            .showcase-thumb img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.6s ease;
+            }
+
+
+            .thumb-fallback-pur {
+                background: linear-gradient(160deg, #ffe7d4 0%, #f7c5d0 55%, #e8829a 100%);
+            }
+            .thumb-fallback-pur::after {
+                content: "🐾";
+                position: absolute;
+                inset: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                text-shadow: 0 4px 18px rgba(0,0,0,0.15);
+            }
+
+            .thumb-fallback-puf {
+                background: linear-gradient(160deg, #fff4c4 0%, #ffc371 55%, #ff5f6d 100%);
+            }
+            .thumb-fallback-puf::after {
+                content: "P";
+                position: absolute;
+                inset: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Playfair Display", serif;
+                font-style: italic;
+                font-size: 5rem;
+                color: rgba(255,255,255,0.9);
+                text-shadow: 0 4px 18px rgba(0,0,0,0.2);
+            }
+
+            .thumb-fallback-rare {
+                background: linear-gradient(160deg, #f7c5d0 0%, #e8829a 50%, #c9878a 100%);
+            }
+            .thumb-fallback-rare::after {
+                content: "RB";
+                position: absolute;
+                inset: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Playfair Display", serif;
+                font-style: italic;
+                font-size: 4rem;
+                color: rgba(255,255,255,0.85);
+                text-shadow: 0 4px 18px rgba(0,0,0,0.18);
+            }
+
+            .thumb-fallback-vel {
+                background: linear-gradient(160deg, #ffd6d6 0%, #ff6b6b 55%, #c44569 100%);
+            }
+            .thumb-fallback-vel::after {
+                content: "V";
+                position: absolute;
+                inset: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: "Playfair Display", serif;
+                font-style: italic;
+                font-size: 5rem;
+                color: rgba(255,255,255,0.85);
+                text-shadow: 0 4px 18px rgba(0,0,0,0.18);
+            }
+
+            .thumb-fallback-arta {
+                background: linear-gradient(160deg, #e8d8f7 0%, #c5b0ee 50%, #8b7ab5 100%);
+            }
+            .thumb-fallback-arta::after {
+                content: "✶";
+                position: absolute;
+                inset: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4.5rem;
+                color: rgba(255,255,255,0.85);
+                text-shadow: 0 4px 18px rgba(0,0,0,0.18);
+            }
+
+            .showcase-thumb-landscape {
+                background: linear-gradient(160deg, #1a0f14, #2d1e25 50%, #4a2d38 100%);
+            }
+
+            .showcase-thumb-landscape video {
+                object-fit: contain;
+                background: #0a0508;
+            }
+
+
+            .showcase-card:hover .showcase-thumb video,
+            .showcase-card:hover .showcase-thumb img {
+                transform: scale(1.04);
+            }
+
+            .showcase-thumb-overlay {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(180deg, transparent 40%, rgba(45, 30, 37, 0.55) 100%);
+                pointer-events: none;
+            }
+
+            .showcase-cat-badge {
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+                background: rgba(255, 255, 255, 0.92);
+                border-radius: 50px;
+                padding: 0.3rem 0.9rem;
+                font-size: 0.62rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--rose-gold);
+                font-weight: 600;
+                backdrop-filter: blur(10px);
+                z-index: 2;
+            }
+
+            .showcase-hint {
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+                background: rgba(255,255,255,0.92);
+                border-radius: 50px;
+                padding: 0.35rem 0.85rem 0.35rem 0.7rem;
+                font-size: 0.65rem;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--dark-mid);
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 0.4rem;
+                opacity: 0;
+                transform: translateY(8px);
+                transition: opacity 0.3s, transform 0.3s;
+                backdrop-filter: blur(10px);
+                z-index: 2;
+            }
+
+            .showcase-card:hover .showcase-hint {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .showcase-hint .dot {
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background: var(--sakura-deep);
+                animation: pulseDot 1.4s ease infinite;
+            }
+
+            @keyframes pulseDot {
+                0%, 100% { opacity: 1; transform: scale(1); }
+                50% { opacity: 0.4; transform: scale(1.4); }
+            }
+
+            .showcase-body {
+                padding: 1.3rem 1.4rem 1.5rem;
+            }
+
+            .showcase-title {
+                font-family: "Playfair Display", serif;
+                font-size: 1.15rem;
+                font-weight: 600;
+                color: var(--dark);
+                margin-bottom: 0.3rem;
+                line-height: 1.25;
+            }
+
+            .showcase-desc {
+                font-size: 0.78rem;
+                color: var(--text-muted);
+                font-weight: 300;
+                letter-spacing: 0.06em;
+            }
+
+            /* CONCEPT placeholder (Pufuleți) */
+            .showcase-thumb.concept {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg, #ffd700, #ff6b9d 60%, #c44569);
+            }
+
+            .concept-glyph {
+                font-family: "Playfair Display", serif;
+                font-style: italic;
+                font-size: 3.5rem;
+                color: #fff;
+                text-shadow: 0 6px 24px rgba(0,0,0,0.25);
+                letter-spacing: -0.02em;
+            }
+
+
+            /* DESKTOP DEVICE FRAME */
+            .desktop-device {
+                position: relative;
+                width: min(820px, 92vw);
+                aspect-ratio: 16 / 10;
+                background: linear-gradient(145deg, #2d1e25, #4a2d38);
+                border-radius: 18px;
+                padding: 0;
+                box-shadow: 0 30px 80px rgba(0,0,0,0.5),
+                            inset 0 0 0 1px rgba(255,255,255,0.06);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .desktop-bar {
+                height: 32px;
+                background: linear-gradient(180deg, #3a2530, #2d1e25);
+                display: flex;
+                align-items: center;
+                padding: 0 14px;
+                gap: 7px;
+                flex-shrink: 0;
+                border-bottom: 1px solid rgba(255,255,255,0.04);
+            }
+
+            .desktop-bar .dot {
+                width: 11px;
+                height: 11px;
+                border-radius: 50%;
+            }
+
+            .desktop-bar .dot-red    { background: #ff5f57; }
+            .desktop-bar .dot-yellow { background: #febc2e; }
+            .desktop-bar .dot-green  { background: #28c840; }
+
+            .desktop-bar .url-pill {
+                margin-left: 14px;
+                background: rgba(255,255,255,0.06);
+                border-radius: 50px;
+                padding: 3px 14px;
+                font-size: 0.7rem;
+                color: rgba(255,255,255,0.55);
+                letter-spacing: 0.04em;
+                max-width: 60%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+            .desktop-screen {
+                flex: 1;
+                background: #000;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .desktop-screen video,
+            .desktop-screen img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                background: #0a0508;
+                display: block;
+            }
+
+            .desktop-screen iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+                background: #fff;
+                display: block;
+            }
+
+            /* MOCKUP THUMBNAILS (To-Do & Fitness) */
+            .mockup-thumb {
+                display: flex !important;
+                align-items: center;
+                justify-content: center;
+                padding: 1.5rem;
+            }
+
+            .mockup-thumb.mockup-todo {
+                background: linear-gradient(160deg, #fde8ee 0%, #fdf4f8 55%, #fff0f5 100%);
+            }
+
+            .mockup-thumb.mockup-fitness {
+                background: linear-gradient(160deg, #e8f4ee 0%, #fde8ee 60%, #fdf0f4 100%);
+            }
+
+            .mock-phone {
+                position: relative;
+                width: 58%;
+                aspect-ratio: 9 / 19;
+                background: linear-gradient(145deg, #2d1e25, #4a2d38);
+                border-radius: 20px;
+                padding: 7px;
+                box-shadow: 0 14px 32px rgba(45, 30, 37, 0.25),
+                            inset 0 0 0 1.5px rgba(255,255,255,0.08);
+            }
+
+            .mock-phone-bar {
+                position: absolute;
+                top: 11px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 38px;
+                height: 5px;
+                background: #000;
+                border-radius: 100px;
+                z-index: 2;
+            }
+
+            .mock-phone-screen {
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                border-radius: 14px;
+                overflow: hidden;
+                position: relative;
+                padding: 1.4rem 0.65rem 0.65rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.4rem;
+            }
+
+            /* To-Do mock */
+            .mock-todo-header {
+                padding: 0.2rem 0.3rem 0.45rem;
+                border-bottom: 1px solid rgba(232, 130, 154, 0.18);
+                margin-bottom: 0.3rem;
+            }
+
+            .mock-todo-title {
+                font-family: "Playfair Display", serif;
+                font-size: 0.7rem;
+                font-weight: 600;
+                color: var(--dark);
+            }
+
+            .mock-todo-date {
+                font-size: 0.45rem;
+                letter-spacing: 0.15em;
+                color: var(--rose-gold);
+                text-transform: uppercase;
+                margin-top: 0.1rem;
+            }
+
+            .mock-task {
+                display: flex;
+                align-items: center;
+                gap: 0.35rem;
+                padding: 0.18rem 0.3rem;
+            }
+
+            .mock-check {
+                width: 9px;
+                height: 9px;
+                border-radius: 50%;
+                border: 1.2px solid var(--sakura);
+                flex-shrink: 0;
+                position: relative;
+            }
+
+            .mock-task.done .mock-check {
+                background: linear-gradient(135deg, var(--sakura-deep), var(--rose-gold));
+                border-color: transparent;
+            }
+
+            .mock-task.done .mock-check::after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 2.5px;
+                width: 3px;
+                height: 1.5px;
+                border-left: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+                transform: rotate(-45deg);
+            }
+
+            .mock-line {
+                flex: 1;
+                height: 4px;
+                background: linear-gradient(90deg, rgba(232, 130, 154, 0.3), rgba(232, 130, 154, 0.1));
+                border-radius: 50px;
+            }
+
+            .mock-line.short {
+                width: 60%;
+                flex: 0 0 60%;
+            }
+
+            .mock-task.done .mock-line {
+                background: linear-gradient(90deg, rgba(232, 130, 154, 0.15), rgba(232, 130, 154, 0.05));
+            }
+
+            .mock-fab {
+                position: absolute;
+                bottom: 0.65rem;
+                right: 0.65rem;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                background: linear-gradient(135deg, var(--sakura-deep), var(--rose-gold));
+                color: #fff;
+                font-size: 0.85rem;
+                font-weight: 300;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 10px rgba(232, 130, 154, 0.4);
+                line-height: 1;
+            }
+
+            /* Fitness mock */
+            .mock-fit-screen {
+                background: linear-gradient(160deg, #c9878a 0%, #e8829a 45%, #f7c5d0 100%);
+                color: #fff;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 1.4rem 0.6rem 0.6rem;
+            }
+
+            .mock-fit-greeting {
+                font-family: "Playfair Display", serif;
+                font-size: 0.55rem;
+                font-style: italic;
+                opacity: 0.92;
+                margin-bottom: 0.5rem;
+                text-align: center;
+            }
+
+            .mock-fit-ring {
+                position: relative;
+                width: 70%;
+                aspect-ratio: 1;
+                margin-bottom: 0.5rem;
+            }
+
+            .mock-fit-ring svg {
+                width: 100%;
+                height: 100%;
+            }
+
+            .mock-fit-steps {
+                position: absolute;
+                inset: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .mock-fit-steps .num {
+                font-family: "Playfair Display", serif;
+                font-size: 0.85rem;
+                font-weight: 600;
+            }
+
+            .mock-fit-steps .lbl {
+                font-size: 0.38rem;
+                letter-spacing: 0.25em;
+                opacity: 0.85;
+                margin-top: 0.1rem;
+            }
+
+            .mock-fit-stats {
+                display: flex;
+                gap: 0.4rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .mock-fit-stat {
+                background: rgba(255,255,255,0.18);
+                backdrop-filter: blur(6px);
+                border-radius: 8px;
+                padding: 0.3rem 0.5rem;
+                text-align: center;
+                min-width: 36px;
+            }
+
+            .mock-fit-stat .v {
+                display: block;
+                font-family: "Playfair Display", serif;
+                font-size: 0.55rem;
+                font-weight: 600;
+            }
+
+            .mock-fit-stat .l {
+                display: block;
+                font-size: 0.35rem;
+                letter-spacing: 0.2em;
+                opacity: 0.85;
+                margin-top: 0.05rem;
+            }
+
+            /* PHONE MODAL */
+            .phone-modal {
+                position: fixed;
+                inset: 0;
+                z-index: 9000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.4s ease, visibility 0.4s ease;
+                padding: 2rem 1rem;
+                overflow-y: auto;
+            }
+
+            .phone-modal.open {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .phone-backdrop {
+                position: absolute;
+                inset: 0;
+                background: rgba(45, 30, 37, 0.78);
+                backdrop-filter: blur(18px);
+                -webkit-backdrop-filter: blur(18px);
+                cursor: none;
+            }
+
+            .phone-stage {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                transform: scale(0.92);
+                transition: transform 0.4s cubic-bezier(0.34, 1.4, 0.64, 1);
+            }
+
+            .phone-modal.open .phone-stage {
+                transform: scale(1);
+            }
+
+            .phone-device {
+                position: relative;
+                width: min(330px, 80vw);
+                aspect-ratio: 9 / 19.5;
+                background: linear-gradient(145deg, #2d1e25, #4a2d38);
+                border-radius: 44px;
+                padding: 12px;
+                box-shadow: 0 30px 80px rgba(0,0,0,0.5),
+                            inset 0 0 0 2px rgba(255,255,255,0.05);
+            }
+
+            .phone-screen {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background: #000;
+                border-radius: 33px;
+                overflow: hidden;
+                box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
+            }
+
+            .phone-notch {
+                position: absolute;
+                top: 16px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 96px;
+                height: 26px;
+                background: #000;
+                border-radius: 100px;
+                z-index: 3;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            }
+
+            .phone-screen video,
+            .phone-screen img,
+            .phone-screen iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+                object-fit: cover;
+                display: block;
+            }
+
+            .phone-screen iframe {
+                background: #fff;
+            }
+
+            .phone-screen .concept-cover {
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(160deg, #ffd700 0%, #ff6b9d 50%, #c44569 100%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                text-align: center;
+                color: #fff;
+            }
+
+            .phone-screen .concept-cover .label {
+                font-size: 0.7rem;
+                letter-spacing: 0.4em;
+                text-transform: uppercase;
+                opacity: 0.85;
+                margin-bottom: 1.2rem;
+            }
+
+            .phone-screen .concept-cover h3 {
+                font-family: "Playfair Display", serif;
+                font-size: 2rem;
+                font-weight: 600;
+                line-height: 1.1;
+                margin-bottom: 0.8rem;
+            }
+
+            .phone-screen .concept-cover .em {
+                font-style: italic;
+            }
+
+            .phone-screen .concept-cover p {
+                font-size: 0.85rem;
+                font-weight: 300;
+                opacity: 0.9;
+                line-height: 1.5;
+                max-width: 220px;
+            }
+
+            .phone-meta {
+                text-align: center;
+                color: #fff;
+            }
+
+            .phone-meta-cat {
+                font-size: 0.7rem;
+                letter-spacing: 0.3em;
+                text-transform: uppercase;
+                color: var(--sakura);
+                margin-bottom: 0.4rem;
+            }
+
+            .phone-meta-title {
+                font-family: "Playfair Display", serif;
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+
+            .phone-meta-title em {
+                font-style: italic;
+                color: var(--sakura);
+            }
+
+            .phone-close {
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.12);
+                border: 1px solid rgba(255,255,255,0.2);
+                color: #fff;
+                font-size: 1.1rem;
+                cursor: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 3;
+                transition: background 0.3s, transform 0.3s;
+                backdrop-filter: blur(10px);
+            }
+
+            .phone-close:hover {
+                background: rgba(255,255,255,0.22);
+                transform: rotate(90deg);
+            }
+
+            /* FOOTER SOCIALS — SVG */
+            .footer-social svg {
+                width: 18px;
+                height: 18px;
+                stroke: currentColor;
+                fill: none;
+                stroke-width: 1.7;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+            }
+
+            .footer-social[data-brand="instagram"] svg,
+            .footer-social[data-brand="email"] svg {
+                stroke-width: 1.6;
+            }
+
             /* CONTACT */
             #contact {
                 padding: 7rem 0;
@@ -1528,8 +2391,22 @@
                 }
 
                 .projects-grid,
+                .projects-showcase,
                 .certs-grid {
                     grid-template-columns: repeat(2, 1fr);
+                }
+
+                .skills-premium {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .desktop-device {
+                    width: 92vw;
+                    aspect-ratio: 16 / 10;
+                }
+
+                .phone-device {
+                    width: min(280px, 70vw);
                 }
 
                 nav .nav-links {
@@ -1539,12 +2416,53 @@
 
             @media (max-width: 600px) {
                 .projects-grid,
+                .projects-showcase,
+                .skills-premium,
                 .certs-grid {
                     grid-template-columns: 1fr;
                 }
 
                 .tools-grid {
                     grid-template-columns: repeat(3, 1fr);
+                }
+
+                .desktop-device {
+                    width: 94vw;
+                    aspect-ratio: 16 / 11;
+                    border-radius: 12px;
+                }
+
+                .desktop-bar {
+                    height: 24px;
+                    padding: 0 10px;
+                }
+
+                .desktop-bar .dot {
+                    width: 8px;
+                    height: 8px;
+                }
+
+                .desktop-bar .url-pill {
+                    font-size: 0.6rem;
+                }
+
+                .phone-device {
+                    width: min(240px, 62vw);
+                }
+
+                .phone-close {
+                    top: 1rem;
+                    right: 1rem;
+                    width: 38px;
+                    height: 38px;
+                }
+
+                .phone-stage {
+                    gap: 1rem;
+                }
+
+                .phone-meta-title {
+                    font-size: 1.15rem;
                 }
             }
 
@@ -1567,7 +2485,7 @@
         <div id="loading">
             <div class="loading-name">Teofana</div>
             <div class="loading-line"></div>
-            <div class="loading-sub">Digital Marketing Strategist</div>
+            <div class="loading-sub">Digital Marketing Student</div>
             <div class="loading-progress">
                 <div class="loading-progress-bar"></div>
             </div>
@@ -1588,7 +2506,7 @@
         <!-- HERO -->
         <section id="hero">
             <div class="hero-left">
-                <div class="hero-tag">Digital Marketing Strategist</div>
+                <div class="hero-tag">Digital Marketing Student</div>
                 <h1 class="hero-name">
                     Hello, I'm
                     <em>Teofana</em>
@@ -1599,12 +2517,7 @@
                     &nbsp;·&nbsp; Branding
                 </div>
                 <p class="hero-desc">
-                    Creez strategii digitale cu impact, care combină
-                    creativitatea vizuală cu datele și știința marketingului.
-                    <strong
-                        >Pasionată de branding, storytelling și campanii care
-                        schimbă jocul.</strong
-                    >
+                    Explorez marketingul digital prin social media, branding și storytelling, combinând ideile creative cu dorința de a învăța și de a contribui la proiecte reale.
                 </p>
                 <div class="hero-cta">
                     <a href="#portfolio" class="btn-primary">View Portfolio</a>
@@ -1701,13 +2614,13 @@
                                             font-weight: 300;
                                         "
                                     >
-                                        Digital Marketing Strategist
+                                        Digital Marketing Student
                                     </div>
                                 </div>
                             </div>
                             <div class="about-stats">
                                 <div class="stat-item">
-                                    <div class="stat-number">10+</div>
+                                    <div class="stat-number">7</div>
                                     <div class="stat-label">Projects</div>
                                 </div>
                                 <div class="stat-item">
@@ -1730,22 +2643,13 @@
                         style="transition-delay: 0.15s"
                     >
                         <p class="about-desc">
-                            Sunt <strong>Teofana</strong>, o tânără pasionată de
-                            marketing digital care crede că fiecare brand merită
-                            o poveste bine spusă. Specializată în
-                            <strong
-                                >social media, branding și digital
-                                campaigns</strong
-                            >, aduc o perspectivă proaspătă, creativă și
-                            strategică.
+                            Sunt <strong>Teofana</strong>, pasionată de marketing digital, comunicare și modul în care brandurile își construiesc prezența online. Îmi place să descopăr cum funcționează social media, comunicarea de brand și campaniile digitale, iar în fiecare proiect caut să înțeleg mai bine publicul, mesajul și emoția din spatele unui brand.
                         </p>
                         <p class="about-desc">
-                            Momentan urmez un
-                            <strong
-                                >Master în Strategii de Marketing Online</strong
-                            >, unde îmbin teoria avansată cu practică reală —
-                            construind campanii, analizând date și creând
-                            conținut care captivează audiențe.
+                            În prezent urmez un <strong>Master în Strategii de Marketing Online</strong>, unde îmi dezvolt cunoștințele prin proiecte practice, analiză și studiu aplicat. Sunt la început de drum profesional, dar am o dorință reală de a învăța, de a mă implica în proiecte concrete și de a contribui cu idei creative, atenție la detalii și o perspectivă fresh.
+                        </p>
+                        <p class="about-desc">
+                            Îmi doresc să cresc într-un mediu în care pot învăța de la oameni cu experiență și în care pot transforma pasiunea pentru comunicare digitală în rezultate vizibile.
                         </p>
                         <div class="timeline">
                             <div class="timeline-item">
@@ -1782,182 +2686,134 @@
                 <div class="section-header reveal">
                     <div class="section-tag">Portfolio</div>
                     <h2 class="section-title">Selected <em>Projects</em></h2>
-                    <p
-                        style="
-                            font-size: 0.88rem;
-                            color: var(--text-muted);
-                            font-weight: 300;
-                            margin-top: 1rem;
-                            max-width: 480px;
-                            margin-left: auto;
-                            margin-right: auto;
-                            line-height: 1.7;
-                        "
-                    >
-                        O selecție de proiecte care demonstrează creativitate,
-                        strategie și rezultate reale.
+                    <p style="font-size: 0.88rem; color: var(--text-muted); font-weight: 300; margin-top: 1rem; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+                        Plimbă cursorul peste un proiect și ține o secundă și jumătate — se va deschide într-un device live.
                     </p>
                 </div>
-                <div class="filter-bar reveal">
-                    <button class="filter-btn active" data-filter="all">
-                        All Work
-                    </button>
-                    <button class="filter-btn" data-filter="social">
-                        Social Media
-                    </button>
-                    <button class="filter-btn" data-filter="branding">
-                        Branding
-                    </button>
-                    <button class="filter-btn" data-filter="ads">Ads</button>
-                    <button class="filter-btn" data-filter="content">
-                        Content Strategy
-                    </button>
-                    <button class="filter-btn" data-filter="design">
-                        Canva Design
-                    </button>
-                </div>
-                <div class="projects-grid" id="projects-grid">
-                    <!-- PROJECT CARDS — Add yours here! -->
-                    <div class="project-card reveal" data-cat="branding">
-                        <div class="project-thumb">
-                            <div class="project-thumb-bg grad-1">🌸</div>
-                            <span class="project-cat-badge">Branding</span>
+                                <div class="projects-showcase reveal" id="projects-showcase">
+                    <div class="showcase-card" data-type="video" data-device="desktop" data-src="Hope.mp4" data-title="Rare Beauty" data-cat="Social Media Ad">
+                        <div class="showcase-thumb">
+                            <img src="rare_beauty.jpeg" alt="Rare Beauty thumbnail" onerror="this.style.display='none'; this.parentElement.classList.add('thumb-fallback-rare');" />
+                            <span class="showcase-cat-badge">Social Media Ad</span>
+                            <span class="showcase-hint"><span class="dot"></span>Hold to preview</span>
+                            <div class="showcase-thumb-overlay"></div>
                         </div>
-                        <div class="project-body">
-                            <h3 class="project-title">
-                                Bloom Skincare — Brand Identity
-                            </h3>
-                            <p class="project-desc">
-                                Identitate vizuală completă pentru un brand de
-                                skincare natural — logo, palette, tone of voice
-                                și brand guidelines.
-                            </p>
-                            <a href="#" class="project-link">View Project →</a>
+                        <div class="showcase-body">
+                            <h3 class="showcase-title">Rare Beauty</h3>
+                            <div class="showcase-desc">Social Media Ad</div>
                         </div>
                     </div>
 
-                    <div
-                        class="project-card reveal"
-                        data-cat="social"
-                        style="transition-delay: 0.08s"
-                    >
-                        <div class="project-thumb">
-                            <div class="project-thumb-bg grad-4">📱</div>
-                            <span class="project-cat-badge">Social Media</span>
+                    <div class="showcase-card" data-type="video" data-device="desktop" data-src="Strawberry.mp4" data-title="Velocità" data-cat="Promo Video">
+                        <div class="showcase-thumb">
+                            <img src="https://images.unsplash.com/photo-1576506295286-5cda18df43e7?w=900&q=85&auto=format&fit=crop" alt="Velocità thumbnail" onerror="this.style.display='none'; this.parentElement.classList.add('thumb-fallback-vel');" />
+                            <span class="showcase-cat-badge">Promo Video</span>
+                            <span class="showcase-hint"><span class="dot"></span>Hold to preview</span>
+                            <div class="showcase-thumb-overlay"></div>
                         </div>
-                        <div class="project-body">
-                            <h3 class="project-title">
-                                Instagram Strategy — Fashion Brand
-                            </h3>
-                            <p class="project-desc">
-                                Strategie completă de Instagram pentru un brand
-                                de modă: content calendar, vizuale Canva,
-                                hashtag research și growth.
-                            </p>
-                            <a href="#" class="project-link">View Project →</a>
+                        <div class="showcase-body">
+                            <h3 class="showcase-title">Velocità</h3>
+                            <div class="showcase-desc">Promo Video</div>
                         </div>
                     </div>
 
-                    <div
-                        class="project-card reveal"
-                        data-cat="ads"
-                        style="transition-delay: 0.16s"
-                    >
-                        <div class="project-thumb">
-                            <div class="project-thumb-bg grad-3">📊</div>
-                            <span class="project-cat-badge">Meta Ads</span>
+                    <div class="showcase-card" data-type="image" data-device="phone" data-src="PURINA.png" data-title="Purina România" data-cat="Instagram Post">
+                        <div class="showcase-thumb">
+                            <img src="https://images.unsplash.com/photo-1533743983669-94fa5c4338ec?w=900&q=85&auto=format&fit=crop" alt="Purina România thumbnail" onerror="this.style.display='none'; this.parentElement.classList.add('thumb-fallback-pur');" />
+                            <span class="showcase-cat-badge">Instagram Post</span>
+                            <span class="showcase-hint"><span class="dot"></span>Hold to preview</span>
+                            <div class="showcase-thumb-overlay"></div>
                         </div>
-                        <div class="project-body">
-                            <h3 class="project-title">
-                                Meta Ads Campaign — E-commerce
-                            </h3>
-                            <p class="project-desc">
-                                Campanie Facebook & Instagram Ads pentru un
-                                magazin online — targeting, creativele și
-                                optimizare ROAS 3.2x.
-                            </p>
-                            <a href="#" class="project-link">View Project →</a>
+                        <div class="showcase-body">
+                            <h3 class="showcase-title">Purina România</h3>
+                            <div class="showcase-desc">Instagram Post</div>
                         </div>
                     </div>
 
-                    <div class="project-card reveal" data-cat="design">
-                        <div class="project-thumb">
-                            <div class="project-thumb-bg grad-2">🎨</div>
-                            <span class="project-cat-badge">Canva Design</span>
+                    <div class="showcase-card" data-type="video" data-device="desktop" data-src="arta_vizuala.mp4" data-title="Creative Visual Video" data-cat="Canva Design">
+                        <div class="showcase-thumb">
+                            <img src="gallery.jpeg" alt="Creative Visual Video thumbnail" onerror="this.style.display='none'; this.parentElement.classList.add('thumb-fallback-arta');" />
+                            <span class="showcase-cat-badge">Canva Design</span>
+                            <span class="showcase-hint"><span class="dot"></span>Hold to preview</span>
+                            <div class="showcase-thumb-overlay"></div>
                         </div>
-                        <div class="project-body">
-                            <h3 class="project-title">
-                                Social Media Pack — Café & Bistro
-                            </h3>
-                            <p class="project-desc">
-                                40+ template-uri Canva premium pentru un café
-                                local — stories, posts, reels covers și menu
-                                digital.
-                            </p>
-                            <a href="#" class="project-link">View on Canva →</a>
+                        <div class="showcase-body">
+                            <h3 class="showcase-title">Creative Visual Video</h3>
+                            <div class="showcase-desc">Canva Design</div>
                         </div>
                     </div>
 
-                    <div
-                        class="project-card reveal"
-                        data-cat="content"
-                        style="transition-delay: 0.08s"
-                    >
-                        <div class="project-thumb">
-                            <div class="project-thumb-bg grad-5">✍️</div>
-                            <span class="project-cat-badge"
-                                >Content Strategy</span
-                            >
+                    <div class="showcase-card" data-type="iframe" data-device="desktop" data-src="https://embed.figma.com/proto/fVtkkx85aqdCVGH6ycKjDD/To-do--App?page-id=0%3A1&amp;node-id=4-2&amp;p=f&amp;viewport=-2224%2C-14%2C1.14&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=4%3A2&amp;embed-host=share" data-title="To-Do App" data-cat="Figma UI Design">
+                        <div class="showcase-thumb mockup-thumb mockup-todo">
+                            <div class="mock-phone">
+                                <div class="mock-phone-bar"></div>
+                                <div class="mock-phone-screen">
+                                    <div class="mock-todo-header">
+                                        <div class="mock-todo-title">Today</div>
+                                        <div class="mock-todo-date">May 13</div>
+                                    </div>
+                                    <div class="mock-task done"><span class="mock-check"></span><span class="mock-line"></span></div>
+                                    <div class="mock-task done"><span class="mock-check"></span><span class="mock-line short"></span></div>
+                                    <div class="mock-task"><span class="mock-check"></span><span class="mock-line"></span></div>
+                                    <div class="mock-task"><span class="mock-check"></span><span class="mock-line short"></span></div>
+                                    <div class="mock-task"><span class="mock-check"></span><span class="mock-line"></span></div>
+                                    <div class="mock-fab">+</div>
+                                </div>
+                            </div>
+                            <span class="showcase-cat-badge">Figma UI</span>
+                            <span class="showcase-hint"><span class="dot"></span>Hold to open</span>
+                            <div class="showcase-thumb-overlay"></div>
                         </div>
-                        <div class="project-body">
-                            <h3 class="project-title">
-                                Content Funnel — B2B SaaS
-                            </h3>
-                            <p class="project-desc">
-                                Strategie de content marketing full-funnel
-                                pentru un startup SaaS — pillar pages, blog
-                                articles, lead magnets.
-                            </p>
-                            <a href="#" class="project-link">View Project →</a>
+                        <div class="showcase-body">
+                            <h3 class="showcase-title">To-Do App</h3>
+                            <div class="showcase-desc">Figma UI Design</div>
                         </div>
                     </div>
 
-                    <div
-                        class="project-card reveal"
-                        data-cat="branding"
-                        style="transition-delay: 0.16s"
-                    >
-                        <div class="project-thumb">
-                            <div class="project-thumb-bg grad-6">💫</div>
-                            <span class="project-cat-badge">Branding</span>
+                    <div class="showcase-card" data-type="iframe" data-device="desktop" data-src="https://embed.figma.com/proto/2XLxkFJGIZ9ymaeWXO6Npg/Onboarding-%E2%80%93-Fitness-App?page-id=0%3A1&amp;node-id=3-25&amp;p=f&amp;viewport=-470%2C211%2C0.34&amp;scaling=scale-down&amp;content-scaling=fixed&amp;starting-point-node-id=3%3A25&amp;embed-host=share" data-title="Fitness App" data-cat="Figma UI Design">
+                        <div class="showcase-thumb mockup-thumb mockup-fitness">
+                            <div class="mock-phone">
+                                <div class="mock-phone-bar"></div>
+                                <div class="mock-phone-screen mock-fit-screen">
+                                    <div class="mock-fit-greeting">Hello, Teofana</div>
+                                    <div class="mock-fit-ring">
+                                        <svg viewBox="0 0 100 100">
+                                            <circle cx="50" cy="50" r="42" stroke="rgba(255,255,255,0.25)" stroke-width="8" fill="none"/>
+                                            <circle cx="50" cy="50" r="42" stroke="#fff" stroke-width="8" fill="none" stroke-linecap="round" stroke-dasharray="190 264" transform="rotate(-90 50 50)"/>
+                                        </svg>
+                                        <div class="mock-fit-steps">
+                                            <span class="num">8,547</span>
+                                            <span class="lbl">STEPS</span>
+                                        </div>
+                                    </div>
+                                    <div class="mock-fit-stats">
+                                        <div class="mock-fit-stat"><span class="v">412</span><span class="l">KCAL</span></div>
+                                        <div class="mock-fit-stat"><span class="v">72</span><span class="l">BPM</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="showcase-cat-badge">Figma UI</span>
+                            <span class="showcase-hint"><span class="dot"></span>Hold to open</span>
+                            <div class="showcase-thumb-overlay"></div>
                         </div>
-                        <div class="project-body">
-                            <h3 class="project-title">
-                                Personal Brand — Life Coach
-                            </h3>
-                            <p class="project-desc">
-                                Construirea unui brand personal autentic —
-                                storytelling, identitate vizuală și strategie de
-                                prezență online.
-                            </p>
-                            <a href="#" class="project-link">View Project →</a>
+                        <div class="showcase-body">
+                            <h3 class="showcase-title">Fitness App</h3>
+                            <div class="showcase-desc">Figma UI Design — Onboarding</div>
                         </div>
                     </div>
-                </div>
 
-                <!-- ADD MORE PROJECTS NOTE -->
-                <div
-                    class="reveal"
-                    style="
-                        text-align: center;
-                        margin-top: 2.5rem;
-                        font-size: 0.8rem;
-                        color: var(--text-light);
-                        font-weight: 300;
-                        font-style: italic;
-                    "
-                >
-                    ✦ &nbsp; More projects coming soon &nbsp; ✦
+                    <div class="showcase-card" data-type="video" data-device="phone" data-sound="true" data-src="gusto.MOV" data-title="Pufuleți Gusto" data-cat="TikTok Concept">
+                        <div class="showcase-thumb">
+                            <img src="puffs.jpeg" alt="Pufuleți Gusto thumbnail" onerror="this.style.display='none'; this.parentElement.classList.add('thumb-fallback-puf');" />
+                            <span class="showcase-cat-badge">TikTok Concept</span>
+                            <span class="showcase-hint"><span class="dot"></span>Hold to preview</span>
+                            <div class="showcase-thumb-overlay"></div>
+                        </div>
+                        <div class="showcase-body">
+                            <h3 class="showcase-title">Pufuleți Gusto Redesign</h3>
+                            <div class="showcase-desc">TikTok Concept</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1971,133 +2827,48 @@
                         Certifications & <em>Achievements</em>
                     </h2>
                 </div>
-                <div class="certs-grid">
+                                <div class="certs-grid">
                     <div class="cert-card reveal">
-                        <div
-                            class="cert-logo google"
-                            style="
-                                font-family: &quot;Poppins&quot;, sans-serif;
-                                font-size: 0.75rem;
-                                font-weight: 600;
-                                color: #4285f4;
-                                letter-spacing: 0.05em;
-                            "
-                        >
-                            Google
-                        </div>
-                        <div class="cert-title">
-                            Google Digital Marketing & E-commerce
-                        </div>
-                        <div class="cert-issuer">
-                            Google Career Certificates
-                        </div>
+                        <div class="cert-logo hubspot" style="font-family: &quot;Poppins&quot;, sans-serif; font-size: 0.7rem; font-weight: 700; color: #ff7a59; letter-spacing: 0.02em;">HubSpot</div>
+                        <div class="cert-title">Marketing Digital</div>
+                        <div class="cert-issuer">HubSpot Academy</div>
                         <span class="cert-badge">Verified</span>
                     </div>
-                    <div
-                        class="cert-card reveal"
-                        style="transition-delay: 0.06s"
-                    >
-                        <div
-                            class="cert-logo google"
-                            style="
-                                font-family: &quot;Poppins&quot;, sans-serif;
-                                font-size: 0.75rem;
-                                font-weight: 600;
-                                color: #4285f4;
-                                letter-spacing: 0.05em;
-                            "
-                        >
-                            Google
-                        </div>
-                        <div class="cert-title">
-                            Google Analytics (GA4) Certification
-                        </div>
+                    <div class="cert-card reveal" style="transition-delay: 0.06s">
+                        <div class="cert-logo google" style="font-family: &quot;Poppins&quot;, sans-serif; font-size: 0.75rem; font-weight: 600; color: #4285f4; letter-spacing: 0.05em;">Google</div>
+                        <div class="cert-title">Fundamentele Marketingului Digital</div>
+                        <div class="cert-issuer">Google Digital Garage</div>
+                        <span class="cert-badge">Verified</span>
+                    </div>
+                    <div class="cert-card reveal" style="transition-delay: 0.12s">
+                        <div class="cert-logo google" style="font-family: &quot;Poppins&quot;, sans-serif; font-size: 0.75rem; font-weight: 600; color: #4285f4; letter-spacing: 0.05em;">Google</div>
+                        <div class="cert-title">Google Ads — Noțiuni fundamentale</div>
                         <div class="cert-issuer">Google Skillshop</div>
                         <span class="cert-badge">Verified</span>
                     </div>
-                    <div
-                        class="cert-card reveal"
-                        style="transition-delay: 0.12s"
-                    >
-                        <div
-                            class="cert-logo meta"
-                            style="
-                                font-family: &quot;Poppins&quot;, sans-serif;
-                                font-size: 0.8rem;
-                                font-weight: 700;
-                                color: #1877f2;
-                                letter-spacing: -0.02em;
-                            "
-                        >
-                            Meta
-                        </div>
-                        <div class="cert-title">
-                            Meta Social Media Marketing
-                        </div>
-                        <div class="cert-issuer">Meta Blueprint · Coursera</div>
+                    <div class="cert-card reveal" style="transition-delay: 0.18s">
+                        <div class="cert-logo google" style="font-family: &quot;Poppins&quot;, sans-serif; font-size: 0.75rem; font-weight: 600; color: #4285f4; letter-spacing: 0.05em;">Google</div>
+                        <div class="cert-title">Google Analytics</div>
+                        <div class="cert-issuer">Google Skillshop</div>
                         <span class="cert-badge">Verified</span>
                     </div>
-                    <div
-                        class="cert-card reveal"
-                        style="transition-delay: 0.18s"
-                    >
-                        <div
-                            class="cert-logo meta"
-                            style="
-                                font-family: &quot;Poppins&quot;, sans-serif;
-                                font-size: 0.8rem;
-                                font-weight: 700;
-                                color: #1877f2;
-                                letter-spacing: -0.02em;
-                            "
-                        >
-                            Meta
-                        </div>
-                        <div class="cert-title">
-                            Meta Certified Digital Marketing Associate
-                        </div>
-                        <div class="cert-issuer">Meta Blueprint</div>
-                        <span class="cert-badge">Verified</span>
-                    </div>
-                    <div
-                        class="cert-card reveal"
-                        style="transition-delay: 0.24s"
-                    >
-                        <div
-                            class="cert-logo canva"
-                            style="
-                                font-family: &quot;Poppins&quot;, sans-serif;
-                                font-size: 0.75rem;
-                                font-weight: 600;
-                                color: #cc4b99;
-                                letter-spacing: 0.02em;
-                            "
-                        >
-                            Canva
-                        </div>
-                        <div class="cert-title">Canva Design Fundamentals</div>
+                    <div class="cert-card reveal" style="transition-delay: 0.24s">
+                        <div class="cert-logo canva" style="font-family: &quot;Poppins&quot;, sans-serif; font-size: 0.75rem; font-weight: 600; color: #cc4b99; letter-spacing: 0.02em;">Canva</div>
+                        <div class="cert-title">Canva Essentials</div>
                         <div class="cert-issuer">Canva Design School</div>
                         <span class="cert-badge">Completed</span>
                     </div>
-                    <div
-                        class="cert-card reveal"
-                        style="transition-delay: 0.3s"
-                    >
-                        <div
-                            class="cert-logo hubspot"
-                            style="
-                                font-family: &quot;Poppins&quot;, sans-serif;
-                                font-size: 0.7rem;
-                                font-weight: 700;
-                                color: #ff7a59;
-                                letter-spacing: 0.02em;
-                            "
-                        >
-                            HubSpot
-                        </div>
-                        <div class="cert-title">HubSpot Content Marketing</div>
-                        <div class="cert-issuer">HubSpot Academy</div>
+                    <div class="cert-card reveal" style="transition-delay: 0.3s">
+                        <div class="cert-logo general" style="font-family: &quot;Poppins&quot;, sans-serif; font-size: 0.72rem; font-weight: 600; color: var(--rose-gold); letter-spacing: 0.06em;">UX</div>
+                        <div class="cert-title">UI/UX Design Fundamentals</div>
+                        <div class="cert-issuer">Interaction Design Foundation</div>
                         <span class="cert-badge">Verified</span>
+                    </div>
+                    <div class="cert-card reveal" style="transition-delay: 0.36s">
+                        <div class="cert-logo meta" style="font-family: &quot;Poppins&quot;, sans-serif; font-size: 0.8rem; font-weight: 700; color: #1877f2; letter-spacing: -0.02em;">Meta</div>
+                        <div class="cert-title">Meta Certified Digital Marketing Associate</div>
+                        <div class="cert-issuer">Meta Blueprint</div>
+                        <span class="cert-badge" style="background: linear-gradient(135deg, var(--sakura-light), var(--sakura)); color: var(--dark-mid);">În curs</span>
                     </div>
                 </div>
             </div>
@@ -2110,615 +2881,151 @@
                     <div class="section-tag">Expertise</div>
                     <h2 class="section-title">Skills & <em>Tools</em></h2>
                 </div>
-                <div class="skills-layout">
-                    <div class="skills-left reveal">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name"
-                                    >🌸 Social Media Marketing</span
-                                >
-                                <span
-                                    class="skill-pct"
-                                    style="
-                                        font-size: 0;
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 0;
-                                    "
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                ></span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div
-                                    class="skill-bar-fill"
-                                    data-width="92"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">🎨 Canva Design</span>
-                                <span
-                                    class="skill-pct"
-                                    style="
-                                        font-size: 0;
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 0;
-                                    "
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-light);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                ></span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div
-                                    class="skill-bar-fill"
-                                    data-width="88"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name"
-                                    >✨ Branding & Identity</span
-                                >
-                                <span
-                                    class="skill-pct"
-                                    style="
-                                        font-size: 0;
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 0;
-                                    "
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-light);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                ></span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div
-                                    class="skill-bar-fill"
-                                    data-width="85"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">📊 Meta Ads</span>
-                                <span
-                                    class="skill-pct"
-                                    style="
-                                        font-size: 0;
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 0;
-                                    "
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-light);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                ></span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div
-                                    class="skill-bar-fill"
-                                    data-width="80"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name"
-                                    >✍️ Content Strategy</span
-                                >
-                                <span
-                                    class="skill-pct"
-                                    style="
-                                        font-size: 0;
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 0;
-                                    "
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-light);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                ></span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div
-                                    class="skill-bar-fill"
-                                    data-width="87"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">🔍 SEO Basics</span>
-                                <span
-                                    class="skill-pct"
-                                    style="
-                                        font-size: 0;
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 0;
-                                    "
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-light);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                ></span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div
-                                    class="skill-bar-fill"
-                                    data-width="72"
-                                ></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name"
-                                    >📈 Marketing Analytics</span
-                                >
-                                <span
-                                    class="skill-pct"
-                                    style="
-                                        font-size: 0;
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 0;
-                                    "
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-deep);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                    ><span
-                                        style="
-                                            width: 6px;
-                                            height: 6px;
-                                            border-radius: 50%;
-                                            background: var(--sakura-light);
-                                            display: inline-block;
-                                            margin: 0 1.5px;
-                                        "
-                                    ></span
-                                ></span>
-                            </div>
-                            <div class="skill-bar-track">
-                                <div
-                                    class="skill-bar-fill"
-                                    data-width="78"
-                                ></div>
-                            </div>
+                <div class="skills-premium reveal">
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Marketing Digital</span>
+                            <span class="skill-card-sub">Fundamente</span>
                         </div>
                     </div>
-                    <div
-                        class="skills-right reveal"
-                        style="transition-delay: 0.15s"
-                    >
-                        <div class="skills-pills">
-                            <span class="skill-pill">Instagram Marketing</span>
-                            <span class="skill-pill">TikTok Strategy</span>
-                            <span class="skill-pill">Email Marketing</span>
-                            <span class="skill-pill">Google Ads</span>
-                            <span class="skill-pill">Copywriting</span>
-                            <span class="skill-pill">Brand Storytelling</span>
-                            <span class="skill-pill">Influencer Marketing</span>
-                            <span class="skill-pill">Community Management</span>
-                            <span class="skill-pill">A/B Testing</span>
-                            <span class="skill-pill">Market Research</span>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Creare de Conținut</span>
+                            <span class="skill-card-sub">Storytelling & Copy</span>
                         </div>
-                        <div class="tools-section">
-                            <div class="tools-title">Tools & Platforms</div>
-                            <div class="tools-grid">
-                                <div class="tool-chip">
-                                    <span
-                                        style="
-                                            font-size: 1.4rem;
-                                            display: block;
-                                            margin-bottom: 0.3rem;
-                                        "
-                                        >🎨</span
-                                    >
-                                    Canva
-                                </div>
-                                <div class="tool-chip">
-                                    <span
-                                        style="
-                                            font-size: 1.4rem;
-                                            display: block;
-                                            margin-bottom: 0.3rem;
-                                        "
-                                        >📊</span
-                                    >
-                                    Meta Ads
-                                </div>
-                                <div class="tool-chip">
-                                    <span
-                                        style="
-                                            font-size: 1.4rem;
-                                            display: block;
-                                            margin-bottom: 0.3rem;
-                                        "
-                                        >🔵</span
-                                    >
-                                    Google Ads
-                                </div>
-                                <div class="tool-chip">
-                                    <span
-                                        style="
-                                            font-size: 1.4rem;
-                                            display: block;
-                                            margin-bottom: 0.3rem;
-                                        "
-                                        >📈</span
-                                    >
-                                    GA4
-                                </div>
-                                <div class="tool-chip">
-                                    <span
-                                        style="
-                                            font-size: 1.4rem;
-                                            display: block;
-                                            margin-bottom: 0.3rem;
-                                        "
-                                        >🟠</span
-                                    >
-                                    HubSpot
-                                </div>
-                                <div class="tool-chip">
-                                    <span
-                                        style="
-                                            font-size: 1.4rem;
-                                            display: block;
-                                            margin-bottom: 0.3rem;
-                                        "
-                                        >📱</span
-                                    >
-                                    Later
-                                </div>
-                                <div class="tool-chip">
-                                    <span
-                                        style="
-                                            font-size: 1.4rem;
-                                            display: block;
-                                            margin-bottom: 0.3rem;
-                                        "
-                                        >💜</span
-                                    >
-                                    Notion
-                                </div>
-                                <div class="tool-chip">
-                                    <span
-                                        style="
-                                            font-size: 1.4rem;
-                                            display: block;
-                                            margin-bottom: 0.3rem;
-                                        "
-                                        >📌</span
-                                    >
-                                    Pinterest
-                                </div>
-                            </div>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Google Ads</span>
+                            <span class="skill-card-sub">Campanii Plătite</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Google Analytics</span>
+                            <span class="skill-card-sub">Data & Insights</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><circle cx="17" cy="7" r="3"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Social Media</span>
+                            <span class="skill-card-sub">Noțiuni de Bază</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="19" cy="13" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="10" cy="19" r="2.5"/><path d="M12 2a10 10 0 1 0 0 20"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Canva</span>
+                            <span class="skill-card-sub">Design Visual</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Microsoft Office</span>
+                            <span class="skill-card-sub">Word · Excel · PPT</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 17v-4"/><path d="M12 17v-2"/><path d="M16 17v-6"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Raportare &amp; Date</span>
+                            <span class="skill-card-sub">Sinteză &amp; Analiză</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Coordonare Proiecte</span>
+                            <span class="skill-card-sub">Project Management</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Colaborare</span>
+                            <span class="skill-card-sub">Multiculturală</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1M3 12h1M20 12h1M5.6 5.6l.7.7M18.4 5.6l-.7.7M12 17a5 5 0 0 1-2-9.6 5 5 0 0 1 6.7 4.6 5 5 0 0 1-1.7 3.8L13 17h-2z"/><path d="M10 21h4"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Gândire Analitică</span>
+                            <span class="skill-card-sub">Problem Solving</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <span class="skill-card-ico" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3.5-7.1"/><path d="M21 4v5h-5"/></svg>
+                        </span>
+                        <div class="skill-card-body">
+                            <span class="skill-card-title">Adaptabilitate</span>
+                            <span class="skill-card-sub">Instrumente Noi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tools-section reveal" style="margin-top: 4rem;">
+                    <div class="tools-title">Tools &amp; Platforms</div>
+                    <div class="tools-grid">
+                        <div class="tool-chip" data-brand="canva">
+                            <span class="tool-mono" style="background: linear-gradient(135deg, #00c4cc, #7d2ae8); color:#fff;">Cv</span>
+                            Canva
+                        </div>
+                        <div class="tool-chip" data-brand="meta">
+                            <span class="tool-mono" style="background: linear-gradient(135deg, #0866ff, #4f46ff); color:#fff;">M</span>
+                            Meta Ads
+                        </div>
+                        <div class="tool-chip" data-brand="google">
+                            <span class="tool-mono" style="background: linear-gradient(135deg, #4285f4, #ea4335); color:#fff;">G</span>
+                            Google Ads
+                        </div>
+                        <div class="tool-chip" data-brand="ga">
+                            <span class="tool-mono" style="background: linear-gradient(135deg, #f9ab00, #e37400); color:#fff;">GA</span>
+                            GA4
+                        </div>
+                        <div class="tool-chip" data-brand="hubspot">
+                            <span class="tool-mono" style="background: linear-gradient(135deg, #ff7a59, #ff5c35); color:#fff;">Hs</span>
+                            HubSpot
+                        </div>
+                        <div class="tool-chip" data-brand="capcut">
+                            <span class="tool-mono" style="background: linear-gradient(135deg, #2b2b2b, #5b5b5b); color:#fff;">Cc</span>
+                            CapCut
+                        </div>
+                        <div class="tool-chip" data-brand="tiktok">
+                            <span class="tool-mono" style="background: linear-gradient(135deg, #25f4ee, #fe2c55); color:#fff;">Tt</span>
+                            TikTok
+                        </div>
+                        <div class="tool-chip" data-brand="pinterest">
+                            <span class="tool-mono" style="background: linear-gradient(135deg, #e60023, #bd081c); color:#fff;">P</span>
+                            Pinterest
                         </div>
                     </div>
                 </div>
@@ -2732,32 +3039,29 @@
                     <div class="section-tag">Contact</div>
                     <h2 class="section-title">Let's Work <em>Together</em></h2>
                 </div>
-                <div class="contact-grid">
+                <div class="contact-grid" style="display:flex; justify-content:center;">
                     <div class="contact-info reveal">
                         <div class="contact-greeting">
                             Open to<br />new opportunities ✦
                         </div>
                         <p class="contact-desc">
-                            Dacă ești un brand, agenție sau recrutor în căutarea
-                            unui creative marketing strategist pasionat, hai să
-                            ne cunoaștem! Sunt disponibilă pentru colaborări
-                            freelance, stagii și posturi full-time.
+                            Dacă ești un brand, agenție sau recrutor în căutarea unei persoane creative, pasionate de comunicare și marketing digital, hai să ne cunoaștem! Sunt disponibilă pentru colaborări freelance, stagii și oportunități full-time.
                         </p>
                         <div class="contact-links">
                             <a
-                                href="mailto:teofana@email.com"
+                                href="mailto:teofana.apopei@yahoo.com"
                                 class="contact-link"
                             >
                                 <span class="contact-link-icon">📧</span>
                                 <div class="contact-link-text">
                                     <div class="contact-link-label">Email</div>
                                     <div class="contact-link-value">
-                                        teofana@email.com
+                                        teofana.apopei@yahoo.com
                                     </div>
                                 </div>
                             </a>
                             <a
-                                href="https://linkedin.com"
+                                href="https://www.linkedin.com/in/teofana-apopei-8b8946357/"
                                 target="_blank"
                                 class="contact-link"
                             >
@@ -2767,12 +3071,12 @@
                                         LinkedIn
                                     </div>
                                     <div class="contact-link-value">
-                                        linkedin.com/in/teofana
+                                        teofana-apopei
                                     </div>
                                 </div>
                             </a>
                             <a
-                                href="https://instagram.com"
+                                href="https://www.instagram.com/teofana.ap."
                                 target="_blank"
                                 class="contact-link"
                             >
@@ -2782,52 +3086,12 @@
                                         Instagram
                                     </div>
                                     <div class="contact-link-value">
-                                        @teofana.marketing
+                                        @teofana.ap.
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div
-                        class="contact-form reveal"
-                        style="transition-delay: 0.15s"
-                    >
-                        <div class="form-group">
-                            <label class="form-label">Name</label>
-                            <input
-                                type="text"
-                                class="form-input"
-                                placeholder="Your name"
-                            />
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Email</label>
-                            <input
-                                type="email"
-                                class="form-input"
-                                placeholder="your@email.com"
-                            />
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Subject</label>
-                            <input
-                                type="text"
-                                class="form-input"
-                                placeholder="How can I help?"
-                            />
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Message</label>
-                            <textarea
-                                class="form-textarea"
-                                placeholder="Tell me about your project..."
-                            ></textarea>
-                        </div>
-                        <button type="button" class="form-submit">
-                            Send Message ✦
-                        </button>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -2835,19 +3099,36 @@
         <footer>
             <div class="footer-logo">Teofana</div>
             <div class="footer-tagline">
-                Digital Marketing Strategist &nbsp;·&nbsp; Creative
-                &nbsp;·&nbsp; Strategic
+                Digital Marketing Student &nbsp;·&nbsp; Communication &nbsp;·&nbsp; Branding
             </div>
             <div class="footer-socials">
-                <a href="#" class="footer-social">in</a>
-                <a href="#" class="footer-social">ig</a>
-                <a href="#" class="footer-social">be</a>
-                <a href="#" class="footer-social">↗</a>
+                <a href="https://www.linkedin.com/in/teofana-apopei-8b8946357/" target="_blank" rel="noopener" class="footer-social" data-brand="linkedin" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="https://www.instagram.com/teofana.ap." target="_blank" rel="noopener" class="footer-social" data-brand="instagram" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </a>
+                <a href="mailto:teofana.apopei@yahoo.com" class="footer-social" data-brand="email" aria-label="Email">
+                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </a>
             </div>
             <div class="footer-copy">
-                © 2025 Teofana. Designed with 🌸 and strategy.
+                © 2025 Teofana Apopei. Built with 🌸 and curiosity.
             </div>
         </footer>
+
+        <!-- DEVICE PREVIEW MODAL -->
+        <div class="phone-modal" id="phone-modal" aria-hidden="true">
+            <div class="phone-backdrop" id="phone-backdrop"></div>
+            <button class="phone-close" id="phone-close" aria-label="Close preview">✕</button>
+            <div class="phone-stage" id="phone-stage">
+                <div class="phone-meta">
+                    <div class="phone-meta-cat" id="phone-meta-cat"></div>
+                    <div class="phone-meta-title" id="phone-meta-title"></div>
+                </div>
+            </div>
+        </div>
+
 
         <script>
             // === LOADING ===
@@ -2880,7 +3161,7 @@
             animateCursor();
             document
                 .querySelectorAll(
-                    "a, button, .project-card, .cert-card, .skill-pill, .filter-btn, .tool-chip",
+                    "a, button, .project-card, .showcase-card, .cert-card, .skill-card, .skill-pill, .filter-btn, .tool-chip, .phone-close",
                 )
                 .forEach((el) => {
                     el.addEventListener("mouseenter", () => {
@@ -2983,42 +3264,109 @@
             );
             reveals.forEach((el) => observer.observe(el));
 
-            // === SKILL BARS ===
-            const skillObs = new IntersectionObserver(
-                (entries) => {
-                    entries.forEach((e) => {
-                        if (e.isIntersecting) {
-                            e.target
-                                .querySelectorAll(".skill-bar-fill")
-                                .forEach((bar) => {
-                                    bar.style.width = bar.dataset.width + "%";
-                                });
-                            skillObs.unobserve(e.target);
-                        }
-                    });
-                },
-                { threshold: 0.3 },
-            );
-            document.querySelector(".skills-left") &&
-                skillObs.observe(document.querySelector(".skills-left"));
+            // === PROJECT SHOWCASE (hover 2s → device modal) ===
+            (function () {
+                const cards = document.querySelectorAll(".showcase-card");
+                const modal = document.getElementById("phone-modal");
+                const stage = document.getElementById("phone-stage");
+                const metaCat = document.getElementById("phone-meta-cat");
+                const metaTitle = document.getElementById("phone-meta-title");
+                const backdrop = document.getElementById("phone-backdrop");
+                const closeBtn = document.getElementById("phone-close");
+                const HOLD_MS = 1500;
+                let timer = null;
 
-            // === PORTFOLIO FILTER ===
-            const filterBtns = document.querySelectorAll(".filter-btn");
-            const projectCards = document.querySelectorAll(".project-card");
-            filterBtns.forEach((btn) => {
-                btn.addEventListener("click", () => {
-                    filterBtns.forEach((b) => b.classList.remove("active"));
-                    btn.classList.add("active");
-                    const filter = btn.dataset.filter;
-                    projectCards.forEach((card) => {
-                        const show =
-                            filter === "all" || card.dataset.cat === filter;
-                        card.style.opacity = show ? "1" : "0.25";
-                        card.style.transform = show ? "" : "scale(0.96)";
-                        card.style.pointerEvents = show ? "" : "none";
+                cards.forEach((card) => {
+                    const thumbVideo = card.querySelector(".showcase-thumb video");
+                    card.addEventListener("mouseenter", () => {
+                        if (thumbVideo) {
+                            const p = thumbVideo.play();
+                            if (p && p.catch) p.catch(() => {});
+                        }
+                        clearTimeout(timer);
+                        timer = setTimeout(() => openModal(card), HOLD_MS);
+                    });
+                    card.addEventListener("mouseleave", () => {
+                        if (thumbVideo) {
+                            thumbVideo.pause();
+                            thumbVideo.currentTime = 0;
+                        }
+                        clearTimeout(timer);
+                    });
+                    card.addEventListener("click", () => {
+                        clearTimeout(timer);
+                        openModal(card);
                     });
                 });
-            });
+
+                function frameMarkup(device, inner, urlPill) {
+                    if (device === "phone") {
+                        return `
+                            <div class="phone-device">
+                                <div class="phone-notch"></div>
+                                <div class="phone-screen">${inner}</div>
+                            </div>`;
+                    }
+                    return `
+                        <div class="desktop-device">
+                            <div class="desktop-bar">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                                <span class="url-pill">${urlPill || "teofana.app"}</span>
+                            </div>
+                            <div class="desktop-screen">${inner}</div>
+                        </div>`;
+                }
+
+                function openModal(card) {
+                    const type = card.dataset.type;
+                    const device = card.dataset.device || "phone";
+                    const src = card.dataset.src;
+                    const title = card.dataset.title || "";
+                    const cat = card.dataset.cat || "";
+
+                    let inner = "";
+                    let urlPill = title.toLowerCase().replace(/\s+/g, "-") + ".preview";
+
+                    if (type === "video") {
+                        const wantsSound = card.dataset.sound === "true";
+                        const muteAttr = wantsSound ? "" : "muted";
+                        const controlsAttr = wantsSound ? "controls" : "";
+                        inner = `<video src="${src}" autoplay loop ${muteAttr} ${controlsAttr} playsinline></video>`;
+                    } else if (type === "iframe") {
+                        inner = `<iframe src="${src}" allowfullscreen loading="lazy"></iframe>`;
+                        urlPill = "figma.com / " + title;
+                    } else if (type === "image") {
+                        inner = `<img src="${src}" alt="${title}" />`;
+                    }
+
+                    stage.querySelectorAll(".phone-device, .desktop-device").forEach(el => el.remove());
+                    const frameHTML = frameMarkup(device, inner, urlPill);
+                    stage.insertAdjacentHTML("afterbegin", frameHTML);
+
+                    metaCat.textContent = cat;
+                    metaTitle.textContent = title;
+                    modal.classList.add("open");
+                    modal.setAttribute("aria-hidden", "false");
+                    document.body.style.overflow = "hidden";
+                }
+
+                function closeModal() {
+                    modal.classList.remove("open");
+                    modal.setAttribute("aria-hidden", "true");
+                    document.body.style.overflow = "";
+                    setTimeout(() => {
+                        stage.querySelectorAll(".phone-device, .desktop-device").forEach(el => el.remove());
+                    }, 400);
+                }
+
+                backdrop.addEventListener("click", closeModal);
+                closeBtn.addEventListener("click", closeModal);
+                document.addEventListener("keydown", (e) => {
+                    if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+                });
+            })();
 
             // === SMOOTH SCROLL FOR NAV LINKS ===
             document.querySelectorAll('a[href^="#"]').forEach((a) => {

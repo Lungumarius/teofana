@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "teofana",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [".claude/serve.sh"],
+      "port": 8910
+    }
+  ]
+}
